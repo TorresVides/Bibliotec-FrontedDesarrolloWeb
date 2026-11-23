@@ -1,0 +1,19 @@
+<!-- Componente web: captura los datos requeridos para registrar una biblioteca. -->
+<section class="panel formulario" aria-labelledby="titulo-registro">
+  <h2 id="titulo-registro">Registrar biblioteca</h2>
+
+  <form id="formulario-biblioteca">
+    <label for="nombre">Nombre</label>
+    <input id="nombre" name="nombre" type="text" required>
+
+    <label for="direccion">Dirección</label>
+    <input id="direccion" name="direccion" type="text" required>
+
+    <label for="ciudad">Ciudad</label>
+    <input id="ciudad" name="ciudad" type="text" required>
+
+    <button type="submit">Guardar biblioteca</button>
+  </form>
+
+  <p id="mensaje" role="status" aria-live="polite"></p>
+</section>

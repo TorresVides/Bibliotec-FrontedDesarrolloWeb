@@ -1,0 +1,17 @@
+<!-- Modelo conceptual del frontend: representa una biblioteca y sus libros asociados. -->
+<script type="text/plain" id="modelo-biblioteca">
+interface Biblioteca {
+  id: number;
+  nombre: string;
+  direccion: string;
+  ciudad: string;
+  libros: Libro[];
+}
+
+interface Libro {
+  id: number;
+  titulo: string;
+  autor: string;
+  anioPublicacion: number;
+}
+</script>

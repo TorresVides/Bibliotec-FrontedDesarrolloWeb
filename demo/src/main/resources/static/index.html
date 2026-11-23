@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sistema de Bibliotecas y Libros</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body style="font-family: 'Roboto', sans-serif;">
+  <main class="contenedor">
+    <h1>Sistema de bibliotecas</h1>
+
+    <!-- Componente formulario: permite crear únicamente bibliotecas. -->
+    <section class="panel" aria-labelledby="titulo-registro">
+      <h2 id="titulo-registro">Registrar biblioteca</h2>
+      <form id="formulario-biblioteca">
+        <label for="nombre">Nombre</label>
+        <input id="nombre" name="nombre" type="text" required>
+
+        <label for="direccion">Dirección</label>
+        <input id="direccion" name="direccion" type="text" required>
+
+        <label for="ciudad">Ciudad</label>
+        <input id="ciudad" name="ciudad" type="text" required>
+
+        <button type="submit">Guardar biblioteca</button>
+      </form>
+      <p id="mensaje" role="status" aria-live="polite"></p>
+    </section>
+
+    <!-- Componente tabla: el contenido proviene completamente del GET al backend. -->
+    <section class="panel" aria-labelledby="titulo-libros">
+      <h2 id="titulo-libros">Libros existentes</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Título</th>
+            <th>Autor</th>
+            <th>Año</th>
+            <th>Biblioteca</th>
+          </tr>
+        </thead>
+        <tbody id="tabla-libros"></tbody>
+      </table>
+    </section>
+  </main>
+
+  <script src="/js/modelos.js"></script>
+  <script src="/js/bibliotecaService.js"></script>
+  <script src="/js/app.js"></script>
+</body>
+</html>
